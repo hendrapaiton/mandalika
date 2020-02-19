@@ -26,7 +26,7 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 
-Installing all libraries needed by this project using [pip](https://pypi.org/project/pip/)
+Installing all libraries needed by this project using [pip](https://pypi.org/project/pip/).
 ```
 $ pip install -r requirements.txt
 ```
