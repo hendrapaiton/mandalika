@@ -31,6 +31,12 @@ Installing all libraries needed by this project using [pip](https://pypi.org/pro
 $ pip install -r requirements.txt
 ```
 
+Make a configuration file with name *.env* with this configuration (_change as desired_).
+```
+MONGODB_SETTINGS = { 'host': 'mongodb://localhost/mandalika' }
+JWT_SECRET_KEY = 'senggigibeach'
+```
+
 Setting the environment for this project.
 ```
 $ export FLASK_APP=app.py
@@ -41,6 +47,7 @@ Running the project.
 ```
 flask run
 ```
+
 
 ## Authors
 
