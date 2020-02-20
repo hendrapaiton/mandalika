@@ -11,6 +11,8 @@ and testing purposes.
 ### Prerequisites
 Before you can run this project you need a install python first on your operating system.
 You can download python [here](https://www.python.org/downloads/) and choose according to your operating system.
+n addition you also need a MongoDB NoSQL database and you can download 
+[here](https://www.mongodb.com/download-center/community).
 
 ### Installing
 
