@@ -29,7 +29,7 @@ initialize_routes(api)
 # Admin account initialization for first uses
 user = User.objects(username='admin@nj.net')
 if not user:
-    login = User(username='admin@nj.net', password='enje123')
+    login = User(username='admin@nj.net', password='enje123', roles=['admin'])
     login.hash_password()
     login.save()
 

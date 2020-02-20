@@ -9,6 +9,7 @@ from models.db import db
 class User(db.Document):
     username = db.EmailField(required=True, unique=True)
     password = db.StringField(required=True)
+    roles = db.ListField(db.StringField(), default=['default'])
 
     # function to hash a password for security encryption
     def hash_password(self):
