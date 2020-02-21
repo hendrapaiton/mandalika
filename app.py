@@ -21,6 +21,19 @@ bcrypt = Bcrypt(app)
 # JWT instances
 jwt = JWTManager(app)
 
+
+# Get roles for authenticated user
+@jwt.user_claims_loader
+def add_claims_to_access_token(user):
+    return {'roles': user.roles}
+
+
+# Load user identity
+@jwt.user_identity_loader
+def user_identity_lookup(user):
+    return user.username
+
+
 # Database Configuration Initialization
 initialize_db(app)
 # API (Routing) Configuration Initialization
