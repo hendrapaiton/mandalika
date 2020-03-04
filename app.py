@@ -11,7 +11,7 @@ from models.db import initialize_db
 from routes.api import initialize_routes
 
 # Flask app instance with static (html, css and js) folder configuration
-app = Flask(__name__, static_url_path='', static_folder='./static')
+app = Flask(__name__)
 # Flask Restful configuration with errors included
 api = Api(app, errors=errors)
 # Files for Configuration System in environment
@@ -45,13 +45,6 @@ if not user:
     login = User(username='admin@nj.net', password='enje123', roles=['admin'])
     login.hash_password()
     login.save()
-
-
-# Route for index file which index.html rendered from static folder
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
-
 
 # Running Flask Application when main class executed
 if __name__ == '__main__':
